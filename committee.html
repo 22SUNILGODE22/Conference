@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Animated Background</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .photo-box {
+            position: relative;
+            overflow: hidden;
+            /* Ensures overflow is hidden for hover effect */
+        }
+
+        .photo-box .name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.5rem;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .photo-box:hover .name {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="relative h-screen  overflow-x-hidden">
+
+
+
+    <nav class="border-gray-200 dark:bg-slate-800 sm:py-3 sticky top-0 z-50">
+        <div class="max-w-screen-xl items-center mx-auto p-4">
+            <div class="flex-1 flex justify-center">
+                <img src="assets/KJC LOGO with 25 Years Cyan.png" class="h-24" alt="KJC Logo" />
+            </div>
+            <button id="navbar-toggle" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full lg:flex lg:justify-center lg:w-auto py-5" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col p-4 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-slate-800 dark:border-gray-700 lg:gap-8 overflow-x-auto text-xl">
+                    <li class="underline-animation">
+                        <a href="home.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-white lg:dark:hover:text-yellow-300 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent">Home</a>
+                    </li>
+                    <!-- Add other links similarly -->
+                </ul>
+
+
+
+
+                <ul
+                    class="font-medium flex flex-col p-4 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-slate-800 dark:border-gray-700 lg:gap-8 overflow-x-auto text-xl">
+                    <li class="underline-animation">
+                        <a href="conference.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-white lg:dark:hover:text-yellow-300 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent">Conference</a>
+                    </li>
+                    <!-- Add other links similarly -->
+                </ul>
+                <ul
+                    class="font-medium flex flex-col p-4 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-slate-800 dark:border-gray-700 lg:gap-8 overflow-x-auto text-xl">
+                    <li class="underline-animation">
+                        <a href="committee.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-white lg:dark:hover:text-yellow-300 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent">Committee</a>
+                    </li>
+                    <!-- Add other links similarly -->
+                </ul>
+                <ul
+                    class="font-medium flex flex-col p-4 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-slate-800 dark:border-gray-700 lg:gap-8 overflow-x-auto text-xl">
+                    <li class="underline-animation">
+                        <a href="cpf.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-white lg:dark:hover:text-yellow-300 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent">CPF</a>
+                    </li>
+                    <!-- Add other links similarly -->
+                </ul>
+                <ul
+                    class="font-medium flex flex-col p-4 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-slate-800 dark:border-gray-700 lg:gap-8 overflow-x-auto text-xl">
+                    <li class="underline-animation">
+                        <a href="abst.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-white lg:dark:hover:text-yellow-300 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent">Abstract
+                            Submissions & Publications
+                        </a>
+                    </li>
+                    <!-- Add other links similarly -->
+                </ul>
+
+                <ul
+                    class="font-medium flex flex-col p-4 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-slate-800 dark:border-gray-700 lg:gap-8 overflow-x-auto text-xl">
+                    <li class="underline-animation">
+                        <a href="contact.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-white lg:dark:hover:text-yellow-300 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent">Contact
+                            Us
+                        </a>
+                    </li>
+                    <!-- Add other links similarly -->
+                </ul>
+                <ul
+                    class="font-medium flex flex-col p-4 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-slate-800 dark:border-gray-700 lg:gap-8 overflow-x-auto text-xl">
+                    <li class="underline-animation">
+                        <a href="registeration.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-white lg:dark:hover:text-yellow-300 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent">Registeration
+                        </a>
+                    </li>
+                    <!-- Add other links similarly -->
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div>
+        <div>
+            <h1 class="text-center text-4xl font-bold mb-4 lg:mb-10 underline">CHIEF PATRONS</h1>
+            <div class="flex justify-center">
+                <div class="flex gap-20">
+                    <!-- First Photo Box -->
+                    <div class="photo-box">
+                        <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-96 h-96 object-cover">
+                        <div class="name">Name 3</div>
+                    </div>
+                    <!-- Second Photo Box -->
+                    <div class="photo-box">
+                        <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-96 h-96 object-cover">
+                        <div class="name">Name 4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h1 class="text-center text-4xl font-bold mb-4 lg:mb-10 mt-10 underline">PATRONS</h1>
+        <div class="grid grid-cols-4 gap-4">
+            <!-- Repeat this block for 22 times -->
+
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 3</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 4</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 5</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 6</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 7</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 8</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 9</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 10</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 11</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 12</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 13</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 14</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 15</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 16</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 17</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 18</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 19</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 20</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 21</div>
+            </div>
+            <div class="photo-box">
+                <img src="https://via.placeholder.com/150" alt="Sample Photo" class="w-full h-full object-cover">
+                <div class="name">Name 22</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        AOS.init();
+
+        document.getElementById('navbar-toggle').addEventListener('click', function () {
+            const navbar = document.getElementById('navbar-default');
+            navbar.classList.toggle('hidden');
+        });
+
+    </script>
+</body>
+<footer class="text-gray-100 bg-gray-900 body-font mt-10 overflow-hidden">
+    <div
+        class="container px-5 py-8 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+            <h3 class="text-lg text-gray-300">Contact Us:</h3>
+
+            <div class="flex w-20  ">
+
+                <iframe class=" h-28"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6499032843003!2d77.64038827599751!3d13.05794248726541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17578c79da7d%3A0xe96dcd8e2b982f8e!2sKristu%20Jayanti%20College%2C%20Autonomous!5e0!3m2!1sen!2sin!4v1716805024846!5m2!1sen!2sin"
+                    width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="flex-grow flex flex-row md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4 flex ">
+
+                <nav class="list-none mb-10">
+                    <li>
+                        <a class="text-gray-600 hover:text-gray-800" href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600 hover:text-gray-800" href="conference.html">Conference</a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600 hover:text-gray-800" href="committee.html">Committee</a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600 hover:text-gray-800" href="cpf.html">CPF</a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600 hover:text-gray-800" href="abst.html">Abstraction Submission &
+                            Publications</a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600 hover:text-gray-800" href="contact.html">Contact Us</a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600 hover:text-gray-800" href="registeration.html">Registeration</a>
+                    </li>
+                </nav>
+            </div>
+
+
+
+
+</html>
